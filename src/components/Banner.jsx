@@ -11,6 +11,7 @@ import './Banner.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const Banner = () => {
   return (
@@ -18,20 +19,33 @@ const Banner = () => {
       <Swiper
         pagination={{
           dynamicBullets: true,
-          
         }}
-        modules={[Pagination]}
-        className="mySwiper"
+        modules={[Pagination, Autoplay]}
+        className="mySwiper h-[40%] md:h-[50%] sm:h-[60%]"
+        loop={false}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>
+          
+          <div className='h-[80%] w-full bg-[#074740] rounded-md overflow-hidden'>
+            <div className='w-full h-full overflow-hidden relative'>
+              <div className='absolute px-4 flex flex-col items-start justify-center h-[90%] w-full'>
+                <h1 className='text-[#F0E9E7] font-bold uppercase leading-none'>New Collection</h1>
+              <h1 className='text-[#F0E9E7] font-bold uppercase'>flat 20% off</h1>
+              <button className='bg-[#F0E9E7] text-[#074740] px-4 py-2 font-semibold mt-4'>Shop Now</button>
+              </div>
+              
+
+
+              <img src="src\assets\bannerShoes.png" alt="nike_shoes" className='h-full absolute -right-2'/>
+            </div>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
     </>
   )

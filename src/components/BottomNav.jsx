@@ -4,7 +4,7 @@ import { CiHeart, CiSettings } from "react-icons/ci";
 
 const BottomNav = () => {
   return (
-    <nav className=" px-3 py-3 text-[#074740]  absolute flex justify-between sm:hidden w-full bottom-0 shadow-custom-shadow ">
+    <nav className=" px-3 py-3 text-[#074740]  absolute flex justify-between sm:hidden w-full bottom-0 shadow-custom-shadow z-[98]  bg-green-50">
       <div className="flex justify-between items-center h-full w-[35%]">
         <div className=" flex flex-col items-center">
           <IoHomeOutline />
